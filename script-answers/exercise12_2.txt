@@ -1,0 +1,27 @@
+Script started on 2021-09-30 23:39:49+03:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[1m[7m%[27m[1m[0m                                                                               
+ 
+]2;makeri@Computer:~/FullStackOpen/part12-containers-applications/script-answers]1;..cript-answers
+[0m[27m[24m[J
+[1m[34m#[00m [36mmakeri [37m@ [32mComputer [37min [1m[33m~/FullStackOpen/part12-containers-applications/script-answers[00m [37m[23:39:50] 
+[1m[31m$ [00m[K[?1h=[?2004hddon cker container run -it ubuntu bash[?1l>[?2004l
+
+]2;docker container run -it ubuntu bash]1;docker]0;root@cfea5ba02270: /root@cfea5ba02270:/# mkdir /usr/src/app
+]0;root@cfea5ba02270: /root@cfea5ba02270:/# touch /usr/src/app/index.js
+]0;root@cfea5ba02270: /root@cfea5ba02270:/# [Kexit
+exit
+[1m[7m%[27m[1m[0m                                                                               
+ 
+]2;makeri@Computer:~/FullStackOpen/part12-containers-applications/script-answers]1;..cript-answers
+[0m[27m[24m[J
+[1m[34m#[00m [36mmakeri [37m@ [32mComputer [37min [1m[33m~/FullStackOpen/part12-containers-applications/script-answers[00m [37m[23:40:35] 
+[1m[31m$ [00m[K[?1h=[?2004heexit[?1l>[?2004l
+
+]2;exit]1;exit
+Script done on 2021-09-30 23:40:40+03:00 [COMMAND_EXIT_CODE="0"]
+
+Commands summarized:
+
+docker container run -it ubuntu bash
+mkdir /usr/src/app
+touch /usr/src/app/index.js
