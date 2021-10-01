@@ -1,0 +1,101 @@
+Commands summarized:
+
+docker-compose -f docker-compose.dev.yml up -d
+docker exec -it todo-backend_mongo_1 bash
+mongo -u root -p example
+show dbs
+use the_database
+show collections
+db.todos.find({})
+db.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false})
+db.todos.find({})
+
+Script started on 2021-10-01 11:14:43+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="177" LINES="32"]
+[1m[7m%[27m[1m[0m                                                                                                                                                                                
+ 
+]2;makeri@Computer:~/FullStackOpen/part12-containers-applications/todo-app/todo-backend]1;../todo-backend
+[0m[27m[24m[J
+[1m[34m#[00m [36mmakeri [37m@ [32mComputer [37min [1m[33m~/FullStackOpen/part12-containers-applications/todo-app/todo-backend[00m [37mon[00m git:[36mmain [31mx[00m [37m[11:14:44] 
+[1m[31m$ [00m[K[?1h=[?2004hscript exercise12_8.txt[23Dexit                   [19Ddocker exec -it todo-backend_mongo_1 bash[41Dexit                                     [37Dscript exercise12_8.txt[23D                       [23Dddocker-com[?7l[31m…[39m[?7h
+
+[A[A[0m[27m[24m[J
+[1m[34m#[00m [36mmakeri [37m@ [32mComputer [37min [1m[33m~/FullStackOpen/part12-containers-applications/todo-app/todo-backend[00m [37mon[00m git:[36mmain [31mx[00m [37m[11:14:44] 
+[1m[31m$ [00mdocker-compose[1m [0m[K[0m             d  script exercise12_8.txt[23Dexit                   [19Ddocker exec -it todo-backend_mongo_1 bash[41Drm exercise12_8.txt                      [22D[19Dexit               [15Ddocker exec -it todo-backend_mongo_1 bash[34Dcontainer ls                      [22D[12Dkill 5d19302fc18a ex6_postgres_1[27D7e8ab2becc36 cc7a8332b936  [25D9058d28b683e             [13D[17Dexec -it todo_backend_mongo_1 bashmongo[35Dcontainer ls                       [23D[19Dscript exercise12_8.txt[23Ddocker-compose -f docker-compose.dev.yml up[43Dcd todo-app/todo-backend                   [19D[24Ddocker-compose -f docker-compose.dev.yml up -d[?1l>[?2004l
+
+]2;docker-compose -f docker-compose.dev.yml up -d]1;docker-composeStarting todo-backend_mongo_1 ... 
+
+[1A[2K
+Starting todo-backend_mongo_1 ... [32mdone[0m
+[1B[1m[7m%[27m[1m[0m                                                                                                                                                                                
+ 
+]2;makeri@Computer:~/FullStackOpen/part12-containers-applications/todo-app/todo-backend]1;../todo-backend
+[0m[27m[24m[J
+[1m[34m#[00m [36mmakeri [37m@ [32mComputer [37min [1m[33m~/FullStackOpen/part12-containers-applications/todo-app/todo-backend[00m [37mon[00m git:[36mmain [31mx[00m [37m[11:15:09] 
+[1m[31m$ [00m[K[?1h=[?2004hddocker exec -it todo-ba[?7l[31m…[39m[?7h
+
+[A[A[0m[27m[24m[J
+[1m[34m#[00m [36mmakeri [37m@ [32mComputer [37min [1m[33m~/FullStackOpen/part12-containers-applications/todo-app/todo-backend[00m [37mon[00m git:[36mmain [31mx[00m [37m[11:15:09] 
+[1m[31m$ [00mdocker exec -it todo-ba[Kckend_mongo_1 bash[?1l>[?2004l
+
+]2;docker exec -it todo-backend_mongo_1 bash]1;docker]0;root@90ba7ececc7e: /root@90ba7ececc7e:/# mongo -u root -p example
+MongoDB shell version v5.0.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("290ba48d-2502-43d8-abc1-74399b9da1fb") }
+MongoDB server version: 5.0.3
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+We recommend you begin using "mongosh".
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting: 
+        2021-10-01T08:15:09.532+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+---
+---
+        Enable MongoDB's free cloud-based monitoring service, which will then receive and display
+        metrics about your deployment (disk utilization, CPU, operation statistics, etc).
+
+        The monitoring data will be available on a MongoDB website with a unique URL accessible to you
+        and anyone you share the URL with. MongoDB may use this information to make product
+        improvements and to suggest MongoDB products and deployment options to you.
+
+        To enable free monitoring, run the following command: db.enableFreeMonitoring()
+        To permanently disable this reminder, run the following command: db.disableFreeMonitoring()
+---
+> show dbs[3G[Jshow dbs[11G
+admin         0.000GB
+config        0.000GB
+local         0.000GB
+the_database  0.000GB
+> use the_database[3G[Juse the_database[19G
+switched to db the_database
+> show collections[3G[Jshow collections[19G
+todos
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("615630b4aa8423cfaf1c1ee6"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("615630b4aa8423cfaf1c1ee7"), "text" : "Learn about containers", "done" : false }
+> db,tos[3G[Jdb,to[8G[3G[Jdb,t[7G[3G[Jdb,[6G[3G[Jdb[5G.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done": false[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done": false[89G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done": false[88G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done": false[87G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done": false[86G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done": false[85G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false[84G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false[85G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false[86G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false[87G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false[88G[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false[89G})[3G[Jdb.todos.insertOne({"text":"Increase the number of tools in my toolbelt", "done":false})[91G
+{
+	"acknowledged" : true,
+	"insertedId" : ObjectId("6156c411d9d8c4a5087a5af7")
+}
+> db.todos.find({})[3G[Jdb.todos.find({})[20G
+{ "_id" : ObjectId("615630b4aa8423cfaf1c1ee6"), "text" : "Write code", "done" : true }
+{ "_id" : ObjectId("615630b4aa8423cfaf1c1ee7"), "text" : "Learn about containers", "done" : false }
+{ "_id" : ObjectId("6156c411d9d8c4a5087a5af7"), "text" : "Increase the number of tools in my toolbelt", "done" : false }
+> exit[3G[Jexit[7G
+bye
+]0;root@90ba7ececc7e: /root@90ba7ececc7e:/# exit
+exit
+[1m[7m%[27m[1m[0m                                                                                                                                                                                
+ 
+]2;makeri@Computer:~/FullStackOpen/part12-containers-applications/todo-app/todo-backend]1;../todo-backend
+[0m[27m[24m[J
+[1m[34m#[00m [36mmakeri [37m@ [32mComputer [37min [1m[33m~/FullStackOpen/part12-containers-applications/todo-app/todo-backend[00m [37mon[00m git:[36mmain [31mx[00m [37m[11:17:45] 
+[1m[31m$ [00m[K[?1h=[?2004heexit[?1l>[?2004l
+
+]2;exit]1;exit
+Script done on 2021-10-01 11:17:47+03:00 [COMMAND_EXIT_CODE="0"]
