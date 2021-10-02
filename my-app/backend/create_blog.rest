@@ -1,0 +1,10 @@
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1ha2VyaSIsImlkIjoiNWY4MDE3Y2QzMDJjNWY1MTM4MDczMTg2IiwiaWF0IjoxNjAzMjcyNjM4fQ.qkNSSG_N-0nsqZaso89BwuxZa_0MtYOdOImIZCRhsaE
+
+{
+    "title": "Tokentestiblogi poistettavaksi",
+    "author": "Poistaja-Pro",
+    "url": "www.pois.com",
+    "likes": 720
+}
