@@ -1,8 +1,25 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Todo from './Todos/Todo';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+const mockTodo = {
+  "text": "Configure tests",
+  "done": false
+}
+
+const mockDelete = () => {
+  console.log('Delete todo')
+}
+
+const mockComplete = () => {
+  mockTodo.done = true
+}
+
+test('renders todo', () => {
+  render(<Todo 
+          todo={mockTodo} 
+          onClickDelete={mockDelete} 
+          onClickComplete={mockComplete}
+        />)
+  const todotext = screen.getByText(/Configure tests/i)
+  expect(todotext).toBeInTheDocument()
+})
