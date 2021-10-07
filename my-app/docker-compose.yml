@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo
+    ports:
+     - 3456:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+      MONGO_INITDB_DATABASE: bloglist
+    volumes:
+      - ./backend/mongo/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - ./backend/mongo_data:/data/db
+    container_name: blog-mongo
+
+  backend:
+    image: blog-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 3003:3003
+    environment:
+      - MONGODB_URI=mongodb://the_username:the_password@blog-mongo:27017/bloglist
+      - PORT=3003
+      - SECRET=secretkey
+    depends_on:
+      - mongo
+    container_name: blog-backend
+
+  frontend:
+    image: blog-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:80
+    depends_on:
+      - backend
+    container_name: blog-frontend
+
